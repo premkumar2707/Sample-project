@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🎓</span>
+                <span class="brand-text">Academic Portal</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Semesters</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-section">
+                            <h4>Physics/Chemistry Cycle</h4>
+                            <a href="#" onclick="loadSemester(1)">1st Semester</a>
+                            <a href="#" onclick="loadSemester(2)">2nd Semester</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Core Engineering</h4>
+                            <a href="#" onclick="loadSemester(3)">3rd Semester</a>
+                            <a href="#" onclick="loadSemester(4)">4th Semester</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Specialization</h4>
+                            <a href="#" onclick="loadSemester(5)">5th Semester</a>
+                            <a href="#" onclick="loadSemester(6)">6th Semester</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Advanced</h4>
+                            <a href="#" onclick="loadSemester(7)">7th Semester</a>
+                            <a href="#" onclick="loadSemester(8)">8th Semester</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="enquiry.html" class="nav-link">Enquiry</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="help.html" class="nav-link">Help</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="social.html" class="nav-link">Follow Us</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link admin-btn" onclick="showAdminLogin()">Admin</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Your Academic Portal</h1>
+                <p>Access comprehensive study materials, notes, question banks, and model papers organized by semester and subject</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="loadSemester(1)">Explore Semesters</button>
+                    <button class="btn btn-secondary" onclick="location.href='help.html'">Get Help</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="stats">
+            <div class="stat-item">
+                <h3>8</h3>
+                <p>Semesters</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Subjects</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Study Materials</p>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+        <section class="content-section" id="content-area">
+            <!-- Semester Grid -->
+            <div class="semester-grid" id="semester-grid">
+                <h2>Choose Your Semester</h2>
+                <div class="grid">
+                    <div class="card semester-card" onclick="loadSemester(1)">
+                        <div class="card-header">
+                            <span class="semester-number">1</span>
+                            <span class="subject-count">8 subjects</span>
+                        </div>
+                        <h3>1st Semester</h3>
+                        <p>Physics/Chemistry Cycle</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(2)">
+                        <div class="card-header">
+                            <span class="semester-number">2</span>
+                            <span class="subject-count">8 subjects</span>
+                        </div>
+                        <h3>2nd Semester</h3>
+                        <p>Physics/Chemistry Cycle</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(3)">
+                        <div class="card-header">
+                            <span class="semester-number">3</span>
+                            <span class="subject-count">7 subjects</span>
+                        </div>
+                        <h3>3rd Semester</h3>
+                        <p>Core Engineering</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(4)">
+                        <div class="card-header">
+                            <span class="semester-number">4</span>
+                            <span class="subject-count">7 subjects</span>
+                        </div>
+                        <h3>4th Semester</h3>
+                        <p>Core Engineering</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(5)">
+                        <div class="card-header">
+                            <span class="semester-number">5</span>
+                            <span class="subject-count">6 subjects</span>
+                        </div>
+                        <h3>5th Semester</h3>
+                        <p>Specialization</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(6)">
+                        <div class="card-header">
+                            <span class="semester-number">6</span>
+                            <span class="subject-count">6 subjects</span>
+                        </div>
+                        <h3>6th Semester</h3>
+                        <p>Specialization</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(7)">
+                        <div class="card-header">
+                            <span class="semester-number">7</span>
+                            <span class="subject-count">5 subjects</span>
+                        </div>
+                        <h3>7th Semester</h3>
+                        <p>Advanced</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(8)">
+                        <div class="card-header">
+                            <span class="semester-number">8</span>
+                            <span class="subject-count">5 subjects</span>
+                        </div>
+                        <h3>8th Semester</h3>
+                        <p>Advanced</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Details (Hidden by default) -->
+            <div class="subject-details" id="subject-details" style="display: none;">
+                <div class="back-button">
+                    <button class="btn btn-outline" onclick="showSemesterGrid()">← Back to Semesters</button>
+                </div>
+                <div class="semester-title" id="semester-title"></div>
+                <div class="subjects-grid" id="subjects-grid"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Everything You Need to Excel</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Organized Content</h3>
+                    <p>Study materials organized by semester, subject, and module for easy navigation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Multiple Formats</h3>
+                    <p>Access notes, question banks, and model papers in PDF, image, and text formats.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⬇️</div>
+                    <h3>Easy Downloads</h3>
+                    <p>Download or preview materials with a single click for offline study.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Admin Control</h3>
+                    <p>Comprehensive admin panel for content management and updates.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="admin-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Login</h3>
+                <span class="close" onclick="hideAdminLogin()">&times;</span>
+            </div>
+            <form class="admin-form" onsubmit="adminLogin(event)">
+                <div class="form-group">
+                    <label for="admin-username">Username:</label>
+                    <input type="text" id="admin-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password:</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-outline" onclick="hideAdminLogin()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel (Hidden by default) -->
+    <div class="admin-panel" id="admin-panel" style="display: none;">
+        <div class="admin-header">
+            <h2>Admin Panel</h2>
+            <button class="btn btn-outline" onclick="adminLogout()">Logout</button>
+        </div>
+        
+        <div class="admin-tabs">
+            <button class="tab-btn active" onclick="showAdminTab('upload')">Upload Content</button>
+            <button class="tab-btn" onclick="showAdminTab('manage')">Manage Content</button>
+        </div>
+        
+        <div class="admin-content">
+            <!-- Upload Tab -->
+            <div class="tab-content active" id="upload-tab">
+                <form class="upload-form" onsubmit="uploadContent(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="semester-select">Semester:</label>
+                            <select id="semester-select" required>
+                                <option value="">Select Semester</option>
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                                <option value="3">3rd Semester</option>
+                                <option value="4">4th Semester</option>
+                                <option value="5">5th Semester</option>
+                                <option value="6">6th Semester</option>
+                                <option value="7">7th Semester</option>
+                                <option value="8">8th Semester</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject-select">Subject:</label>
+                            <select id="subject-select" required>
+                                <option value="">Select Subject</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="content-type">Content Type:</label>
+                            <select id="content-type" required>
+                                <option value="">Select Type</option>
+                                <option value="notes">Notes</option>
+                                <option value="module">Module</option>
+                                <option value="question-bank">Question Bank</option>
+                                <option value="model-paper">Model Paper</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="content-title">Title:</label>
+                            <input type="text" id="content-title" placeholder="e.g., Module 1 - Introduction" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file-upload">Upload File:</label>
+                        <input type="file" id="file-upload" accept=".pdf,.jpg,.jpeg,.png,.txt,.doc,.docx" required>
+                        <small>Supported formats: PDF, Images, Text, Word documents</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content-description">Description (Optional):</label>
+                        <textarea id="content-description" rows="3" placeholder="Brief description of the content"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Upload Content</button>
+                </form>
+            </div>
+            
+            <!-- Manage Tab -->
+            <div class="tab-content" id="manage-tab">
+                <div class="content-list" id="content-list">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Academic Portal</h4>
+                <p>Your comprehensive study companion for academic success.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: support@academicportal.edu</p>
+                <p>Phone: +91 1234567890</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Academic Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
