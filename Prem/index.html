@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNPSU Nexeus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<nav class="navbar"><marquee>
+        <div class="nav-container">
+            <div class="nav-brand">
+               
+                <span class="brand-icon">🎓</span>
+                <span class="brand-text">SNPSU Nexeus</span>
+            </marquee>
+            </div>
+            
+            
+        </div>   </marquee>
+    </nav>
+
+    
+    <main class="main-content">
+       
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Your SNPSU NEXUS Portal</h1>
+                <p>Access comprehensive study materials, notes, question banks, and model papers organized by semester and subject</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="loadSemester(1)">Explore Semesters</button>
+                </div> 
+            </div>
+        </section>
+
+       
+        <section class="stats">
+            <div class="stat-item">
+                <h3>8</h3>
+                <p>Semesters</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Subjects</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Study Materials</p>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+        <section class="content-section" id="content-area">
+            <!-- Semester Grid -->
+            <div class="semester-grid" id="semester-grid">
+                <h2>Choose Your Semester</h2>
+                <div class="grid">
+                    <div class="card semester-card" onclick="loadSemester(1)">
+                        <div class="card-header">
+                            <span class="semester-number">1</span>
+                            <span class="subject-count">8 subjects</span>
+                        </div>
+                        <h3>1st Semester</h3>
+                        <p>Physics/Chemistry Cycle</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(2)">
+                        <div class="card-header">
+                            <span class="semester-number">2</span>
+                            <span class="subject-count">8 subjects</span>
+                        </div>
+                        <h3>2nd Semester</h3>
+                        <p>Physics/Chemistry Cycle</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(3)">
+                        <div class="card-header">
+                            <span class="semester-number">3</span>
+                            <span class="subject-count">7 subjects</span>
+                        </div>
+                        <h3>3rd Semester</h3>
+                        <p>Core Engineering</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(4)">
+                        <div class="card-header">
+                            <span class="semester-number">4</span>
+                            <span class="subject-count">7 subjects</span>
+                        </div>
+                        <h3>4th Semester</h3>
+                        <p>Core Engineering</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(5)">
+                        <div class="card-header">
+                            <span class="semester-number">5</span>
+                            <span class="subject-count">6 subjects</span>
+                        </div>
+                        <h3>5th Semester</h3>
+                        <p>Specialization</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(6)">
+                        <div class="card-header">
+                            <span class="semester-number">6</span>
+                            <span class="subject-count">6 subjects</span>
+                        </div>
+                        <h3>6th Semester</h3>
+                        <p>Specialization</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(7)">
+                        <div class="card-header">
+                            <span class="semester-number">7</span>
+                            <span class="subject-count">5 subjects</span>
+                        </div>
+                        <h3>7th Semester</h3>
+                        <p>Advanced</p>
+                    </div>
+                    
+                    <div class="card semester-card" onclick="loadSemester(8)">
+                        <div class="card-header">
+                            <span class="semester-number">8</span>
+                            <span class="subject-count">5 subjects</span>
+                        </div>
+                        <h3>8th Semester</h3>
+                        <p>Advanced</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Details (Hidden by default) -->
+            <div class="subject-details" id="subject-details" style="display: none;">
+                <div class="back-button">
+                    <button class="btn btn-outline" onclick="showSemesterGrid()">← Back to Semesters</button>
+                </div>
+                <div class="semester-title" id="semester-title"></div>
+                <div class="subjects-grid" id="subjects-grid"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    
+   
+         
+                    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Academic Portal</h4>
+                <p>Your comprehensive study companion for academic success.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: kumarpurushotham511@gmail.com</p>
+                <p>Phone: +91 8217315852</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
